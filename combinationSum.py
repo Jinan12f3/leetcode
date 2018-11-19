@@ -32,9 +32,9 @@ class Solution(object):
                 elif sum(new_match) < tg:
                     search(new_match, cs, tg)
                 else:
-                    continue
+                    break
 
-        search([], candidates, target)
+        search([], sorted(candidates), target)
 
         if matches:
             return list(matches)
